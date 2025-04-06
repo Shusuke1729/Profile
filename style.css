@@ -140,3 +140,51 @@ h1 span {
     animation: fadeIn 1s ease forwards;
     animation-delay: calc(var(--index) * 0.1s); /* 各文字に遅延を設定 */
 }
+
+/* スマホサイズ（最大幅768px）に対応するスタイル */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* スマホでは余白を少なく */
+    }
+
+    h1 {
+        font-size: 1.5em; /* 見出しを小さく */
+    }
+
+    .container {
+        flex-direction: column; /* セクションを縦並びに */
+        gap: 10px; /* セクション間の余白を調整 */
+    }
+
+    .section {
+        padding: 15px; /* セクション内の余白を調整 */
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 影を軽く */
+    }
+
+    .profile .label {
+        width: auto; /* 固定幅を解除して自動調整 */
+        font-size: 0.7rem; /* フォントサイズを小さく */
+        white-space: nowrap; /* テキストの折り返しを防止 */
+    }
+
+    .profile p {
+        display: flex;
+        align-items: flex-start; /* ラベルと内容を上揃えに */
+        flex-wrap: wrap; /* 折り返しを許可 */
+        gap: 5px; /* ラベルと内容の間に余白を追加 */
+    }
+        
+    .profile-pic {
+        width: 120px; /* プロフィール画像を小さく */
+        height: 120px;
+    }
+
+    .network-image img {
+        width: 100%; /* 画像を画面幅いっぱいに */
+        max-height: 200px; /* 高さを制限 */
+    }
+
+    h1 span {
+        font-size: 1.2em; /* アニメーション文字のサイズを調整 */
+    }
+}
