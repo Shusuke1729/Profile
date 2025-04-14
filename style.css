@@ -138,7 +138,7 @@ h1 span {
     display: inline-block;
     opacity: 0; /* 初期状態で非表示 */
     animation: fadeIn 1s ease forwards;
-    animation-delay: calc(var(--index) * 0.1s); /* 各文字に遅延を設定 */
+    animation-delay: calc(var(--index) * 0.15s); /* 各文字に遅延を設定 */
 }
 
 /* スマホサイズ（最大幅768px）に対応するスタイル */
