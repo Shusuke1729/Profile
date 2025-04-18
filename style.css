@@ -149,6 +149,12 @@ h1 span {
     animation-delay: calc(var(--index) * 0.15s); /* 各文字に遅延を設定 */
 }
 
+/* 既存の h1 span のアニメーション設定を削除し、タイトル全体にfadeInを適用 */
+h1#animated-title {
+    opacity: 0; /* 初期状態で非表示 */
+    animation: fadeIn 1.5s ease forwards; /* 全体をふわっと表示 */
+}
+
 /* スマホサイズ（最大幅768px）に対応するスタイル */
 @media screen and (max-width: 768px) {
     body {
